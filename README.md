@@ -1,4 +1,4 @@
-# friend3
+# Facebook Friend Analysis
 
 ## Project setup
 ```
