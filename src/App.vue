@@ -7,14 +7,14 @@
       <v-spacer></v-spacer>
     </v-toolbar>
 
-    <v-content>
-      <particle-container>
+    <particle-container>
+      <v-content>
         <v-container>
           <FacebookSignIn v-if="!signedIn" />
           <MainApp v-if="signedIn" />
         </v-container>
-      </particle-container>
-    </v-content>
+      </v-content>
+    </particle-container>
   </v-app>
 </template>
 
