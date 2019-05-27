@@ -1,38 +1,39 @@
 <template>
-  <v-app>
+  <v-app dark>
     <v-toolbar app>
       <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
+        <span>Facebook Friend Analysis</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn
-        flat
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-      </v-btn>
     </v-toolbar>
 
     <v-content>
-      <HelloWorld/>
+      <particle-container>
+        <v-container>
+          <FacebookSignIn v-if="!signedIn" />
+          <MainApp v-if="signedIn" />
+        </v-container>
+      </particle-container>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import FacebookSignIn from '@/components/FacebookSignIn.vue';
+import MainApp from '@/components/MainApp.vue';
+import ParticleContainer from '@/components/ParticleContainer.vue';
 
 export default {
-  name: 'App',
+  name: 'facebookfriendanalysis',
   components: {
-    HelloWorld
+    FacebookSignIn,
+    MainApp,
+    ParticleContainer
   },
-  data () {
+  data() {
     return {
-      //
-    }
+      signedIn: false
+    };
   }
-}
+};
 </script>

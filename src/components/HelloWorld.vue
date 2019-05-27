@@ -85,8 +85,9 @@
 </template>
 
 <script>
-  export default {
-    data: () => ({
+export default {
+  data() {
+    return {
       ecosystem: [
         {
           text: 'vuetify-loader',
@@ -136,12 +137,8 @@
           text: 'Frequently Asked Questions',
           href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions'
         }
-
       ]
-    })
+    };
   }
+};
 </script>
-
-<style>
-
-</style>
